@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+}
+
+.side_bar{
+  width: 300px;
+  height: 100vh;
+  float: left;
+  color: #ffffff;
+  font-weight: bold;
+  &__head{
+      height: 100px;
+      background-color: #253141;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      &--user_name{
+        font-size: 16px;
+        height: 20px;
+        width: 200px;
+        display: flex;
+        justify-content: space-between;
+      }
+      &--menu{
+        width: 60px;
+        height: 20px;
+        text-align: right;
+      }
+  }
+  &__body{
+      height: calc(100vh - 100px);
+      background-color: #2f3e51;
+      padding: 0 20px;
+  }
+  .new, .menu{
+    color: #ffffff;
+    margin-left: 5px;
+    text-decoration: none;
+  }  
+
+}
+
+.group{
+  padding: 20px 0 40px;
+  &__name{
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+  &__message{
+    font-size: 11px;
+  }
+}
+
+.main_chat{
+  width: calc(100vw - 300px);
+  height: 100vh;
+  float: right;
+ }
+.main_chat-header{
+    height: 100px;
+    display: flex;
+    background-color: #ffffff;
+    border-bottom: solid 1px #eee;
+    border-color: #eeeeee;
+    justify-content: space-between;
+    padding: 0 40px;
+    &__left{
+      padding-top: 35px;
+      &--name{
+        color: #333333;
+        font-size: 20px;
+        margin-bottom: 15px;
+      }
+      &--member{
+        color: #999999;
+        font-size: 12px;
+      }
+    }
+    &__right{
+      color: #38aef0;
+      font-size: 16px;
+      height: 40px;
+      width: 72px;
+      padding: 28px 20px 32px;
+
+    }
+  }
+
+.main_chat-body{
+    height: calc(100vh - 100px - 90px);
+    background-color: #fafafa;
+    padding: 35px 0 0 40px;
+
+  .chat{
+    padding-bottom: 46px;
+    &__info{
+      margin-bottom: 12px;
+      display: flex;
+      &--name{
+        font-size: 16px;
+        color: #333333;
+      }
+      &--time{
+        font-size: 12px;
+        color: #999999;
+        text-align: left;
+      }
+    }
+    &__message{
+      font-size: 14px;
+      color: #434A54;
+    }
+  }
+}
+
+.main_chat-footer{
+    height: 90px;
+    background-color: #d2d2d2;
+    padding: 20px 40px;
+  }
+
+.form{
+display: flex;
+
+  .new_post{
+    width: 100%;
+    display: flex;
+    position: relative;
+  }
+  
+  .input_message{
+    height: 50px;
+    width: 100%;
+    padding: 0 40px 0 10px;
+    background-color: white;
+  }
+  
+  .select_image{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 25px;
+    &__file{
+      display: none;
+    }
+  }
+  
+  .send_btn{
+    margin-left: 15px;
+    width: 100px;
+    color: white;
+    background-color: blue;
+    text-align: center;
+  }
+}
+
