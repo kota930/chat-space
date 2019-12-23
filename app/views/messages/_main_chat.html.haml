@@ -1,0 +1,35 @@
+.main_chat
+  .main_chat-header
+    .main_chat-header__left
+      .main_chat-header__left--name
+        TEST
+      .main_chat-header__left--member
+        KOTA
+    = link_to '#', class: "main_chat-header__right" do
+      = "Edit"
+
+  .main_chat-body
+    .chat  
+      .chat__info
+        .chat__info--name
+          KOTA
+        .chat__info--time
+          2019/12/12
+      .chat__message
+        Hello.
+    .chat  
+      .chat__info
+        .chat__info--name
+          KOTA
+        .chat__info--time
+          2019/12/12
+      .chat__message
+        寒い。
+  .main_chat-footer
+    .form
+      .new_post
+        %input.input_message{placeholder: "type a message", type: "text"}
+        %label.select_image
+          = icon("fas", "image")
+          %input.select_image__file{type: "file"}
+      %input.send_btn{type: "submit", value: "Send"}
