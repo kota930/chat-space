@@ -1,11 +1,11 @@
 .side_bar
   .side_bar__head
     .side_bar__head--user_name
-      KOTA
+      = current_user.name
     .side_bar__head--menu
       = link_to "#", class:"new" do
         = icon('fas', 'edit')
-      = link_to "#", class:"menu" do
+      = link_to edit_user_path(current_user) do
         = icon('fas', 'list-alt')
   .side_bar__body
     .group
