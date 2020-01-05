@@ -2,10 +2,13 @@
   .main_chat-header
     .main_chat-header__left
       .main_chat-header__left--name
-        TEST
+        = @group.name
       .main_chat-header__left--member
-        KOTA
-    = link_to '#', class: "main_chat-header__right" do
+        Member：
+        %ul
+        - @group.users.each do |user|
+          %li= user.name + ', '
+    = link_to edit_group_path(current_user), class: "main_chat-header__right" do
       = "Edit"
 
   .main_chat-body
@@ -26,10 +29,11 @@
       .chat__message
         寒い。
   .main_chat-footer
-    .form
-      .new_post
-        %input.input_message{placeholder: "type a message", type: "text"}
-        %label.select_image
-          = icon("fas", "image")
-          %input.select_image__file{type: "file"}
-      %input.send_btn{type: "submit", value: "Send"}
+    = form_for [@group, @message] do |f|
+      .input_message
+        = f.text_field :content, class: 'type_message', placeholder: 'メッセージを入力してください'
+        .select_image
+          = f.label :image do
+            = icon('fas', 'image', class: 'icon')
+            = f.file_field :image, class: 'select_image__file'
+      = f.submit 'Send', class: 'send_btn'
