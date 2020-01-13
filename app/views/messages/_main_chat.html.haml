@@ -14,8 +14,6 @@
   .main_chat-body
     .messages
       = render @messages
-      -# - @messages.each do |message|
-      -#   = render partial: "messages/message", locals: {message: message}
 
   .main_chat-footer
     = form_for [@group, @message] do |f|
