@@ -12,22 +12,9 @@
       = "Edit"
 
   .main_chat-body
-    .chat  
-      .chat__info
-        .chat__info--name
-          KOTA
-        .chat__info--time
-          2019/12/12
-      .chat__message
-        Hello.
-    .chat  
-      .chat__info
-        .chat__info--name
-          KOTA
-        .chat__info--time
-          2019/12/12
-      .chat__message
-        寒い。
+    .messages
+      = render @messages
+
   .main_chat-footer
     = form_for [@group, @message] do |f|
       .input_message
