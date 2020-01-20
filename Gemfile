@@ -80,3 +80,5 @@ gem 'devise'
 gem 'carrierwave'
 
 gem 'mini_magick'
+
+gem 'fog-aws'
