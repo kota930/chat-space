@@ -17,7 +17,7 @@ $(function(){
                 ${message.content}
               </p>
             </div>
-            <img src=${message.image}, class="chat-message__image">
+            <img src="${message.image}" class="chat-message__image">
           </div>
         </div>`
     } else if(message.image) {
@@ -33,7 +33,7 @@ $(function(){
                 </div>
               </div>
               <div class="chat__message">
-                <img src=${message.image}, class="chat-message__image" >
+                <img src="${message.image}" class="chat-message__image" >
             </div>
           </div>
         </div>`
