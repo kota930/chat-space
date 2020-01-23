@@ -18,7 +18,7 @@
   .main_chat-footer
     = form_for [@group, @message] do |f|
       .input_message
-        = f.text_field :content, class: 'type_message', placeholder: 'メッセージを入力してください'
+        = f.text_field :content, class: 'type_message', placeholder: 'type a message'
         .select_image
           = f.label :image do
             = icon('fas', 'image', class: 'icon')
